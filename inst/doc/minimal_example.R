@@ -38,7 +38,6 @@ samp_size <- (Niter - burnin) / thin
 set.seed(123)
 fit <- LDDMM(data = data, 
              hypers = hypers, 
-             fix_boundary = FALSE, 
              Niter = Niter, 
              burnin = burnin, 
              thin = thin)
