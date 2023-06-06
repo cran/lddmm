@@ -2,7 +2,7 @@
 # LDDMM
 
 An R package for Longitudinal Drift-Diffusion Mixed Models (LDDMM),
-v0.3.
+v0.4.
 
 **Authors**: [Giorgio Paulon](https://giorgiopaulon.github.io/), [Abhra
 Sarkar](https://abhrastat.github.io/)
@@ -29,7 +29,7 @@ details, as well as the main article:
 Paulon, G., Llanos, F., Chandrasekaran, B., Sarkar, A. (2021). [Bayesian
 semiparametric longitudinal drift-diffusion mixed models for tone
 learning in
-adults](https://www.tandfonline.com/doi/abs/10.1080/01621459.2020.1801448?journalCode=uasa20).
+adults](https://doi.org/10.1080/01621459.2020.1801448).
 Journal of the American Statistical Association **116**, 1114-1127
 
 The data included in this package was analyzed in:
@@ -108,7 +108,7 @@ compute_WAIC(fit)
 
 
 To extract relevant posterior draws or posterior summaries instead of simply plotting them, one can use the functions `extract_post_mean` or `extract_post_draws`. 
-Auxiliary functions that assume constant boundary parameters over time ($b_{d,s}^{(i)}(t) = b_{d,s}$ using the article notation) or fix the boundaries to the same level across input predictors ($b_{d,s}^{(i)}(t) = b_{d}$ using the article notation) can be called with the options `boundaries = "constant"` and `boundaries = "fixed"`, respectively.
+Auxiliary functions that assume constant boundary parameters over time ($b_{d,s}^{(i)}(t) = b_{d,s} + u_{d,s}^{(i)}$ using the article notation) or fix the boundaries to the same level across input predictors ($b_{d,s}^{(i)}(t) = b_{d}(t) + u^{(i)}_{d}(t)$ using the article notation) can be called with the options `boundaries = "constant"` and `boundaries = "fixed"`, respectively.
 
 
 
@@ -123,5 +123,5 @@ Please cite the following publication if you use this package in your
 research: Paulon, G., Llanos, F., Chandrasekaran, B., Sarkar, A. (2021).
 [Bayesian semiparametric longitudinal drift-diffusion mixed models for
 tone learning in
-adults](https://www.tandfonline.com/doi/abs/10.1080/01621459.2020.1801448?journalCode=uasa20).
+adults](https://doi.org/10.1080/01621459.2020.1801448).
 Journal of the American Statistical Association **116**, 1114-1127

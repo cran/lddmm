@@ -386,13 +386,19 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the results</span></span>
 <span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_post_pars</span>(data, fit, <span class="at">par =</span> <span class="st">&#39;drift&#39;</span>)</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_post_pars</span>(data, fit, <span class="at">par =</span> <span class="st">&#39;boundary&#39;</span>)</span></code></pre></div>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_post_pars</span>(data, fit, <span class="at">par =</span> <span class="st">&#39;boundary&#39;</span>)</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute the WAIC to compare models</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="fu">compute_WAIC</span>(fit)</span></code></pre></div>
 <p>To extract relevant posterior draws or posterior summaries instead of
 simply plotting them, one can use the functions
 <code>extract_post_mean</code> or <code>extract_post_draws</code>.
 Auxiliary functions that assume constant boundary parameters over time
-or fix the boundaries to the same level across predictors can be called
-with the options <code>boundaries = &quot;constant&quot;</code> and
+(<span class="math inline">\(b_{d,s}^{(i)}(t) = b_{d,s} +
+u_{d,s}^{(i)}\)</span> using the article notation) or fix the boundaries
+to the same level across input predictors (<span class="math inline">\(b_{d,s}^{(i)}(t) = b_{d}(t) +
+u^{(i)}_{d}(t)\)</span> using the article notation) can be called with
+the options <code>boundaries = &quot;constant&quot;</code> and
 <code>boundaries = &quot;fixed&quot;</code>, respectively.</p>
 
 

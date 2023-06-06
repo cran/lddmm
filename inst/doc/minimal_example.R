@@ -46,3 +46,6 @@ fit <- LDDMM(data = data,
 plot_post_pars(data, fit, par = 'drift')
 plot_post_pars(data, fit, par = 'boundary')
 
+# Compute the WAIC to compare models
+compute_WAIC(fit)
+
